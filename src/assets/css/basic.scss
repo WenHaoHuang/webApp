@@ -1,0 +1,93 @@
+/**
+ * @author : wenhao.huang
+ * @date   : 2018/3/27
+ */
+$unit: 1rem;
+$fontFamily: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+
+@import 'variable';
+@import '~components/style/normalize';
+@import '~components/style/mixins';
+@import "~components/style/layout";
+@import "~components/style/color";
+@import "~components/style/button";
+@import "~components/style/text";
+@import "~components/style/transition";
+@import "~components/style/reset";
+
+html, body {
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#app {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .wrapper-hd, .wrapper-bd, .wrapper-ft {
+        width: 100%;
+    }
+    .wrapper-bd {
+        flex: 1;
+        position: relative;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.container {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.btn-primary {
+    border: none;
+    background: $primary linear-gradient(to right, #9F43B0, $primary);
+    &:active {
+        background: #431ADD none;
+    }
+    &.disabled {
+        background: #CFC5F4 none;
+        color: #AB98F1;
+    }
+}
+
+.btn-warning {
+    border: none;
+    background: $primary linear-gradient(to right, #FEBB38, $warning);
+    &:active {
+        background: #EF9019 none;
+    }
+    &.disabled {
+        background: #FFD196 none;
+        color: #FFB251;
+    }
+}
+
+.textarea {
+    border: none;
+    width: 100%;
+    padding: 0.1rem;
+    border: 0.02rem solid $lineColor;
+    resize: none;
+    height: 1.6rem;
+}
+

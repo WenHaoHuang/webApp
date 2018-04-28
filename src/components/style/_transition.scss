@@ -1,0 +1,109 @@
+/**
+ * @author: wenhao.huang
+ * @date:   2017/12/24
+ * @module:
+ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.ker-animate-fade-in {
+    animation: fadeIn ease 0.3s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.ker-animate-fade-out {
+    animation: fadeOut ease 0.3s forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.ker-animate-slide-up {
+    animation: slideUp ease 0.3s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+.ker-animate-slide-down {
+    animation: slideDown ease 0.3s forwards;
+}
+
+.slide-up-enter-active {
+    transition: all .5s ease;
+}
+
+.slide-up-leave-active {
+    transition: all .5s ease;
+}
+
+.slide-up-enter, .slide-up-leave-to {
+    transform: translateY(100%);
+}
+
+.slide-down-enter-active {
+    transition: all .5s ease;
+}
+
+.slide-down-leave-active {
+    transition: all .5s ease;
+}
+
+.slide-down-enter, .slide-down-leave-to {
+    transform: translateY(-100%);
+}
+
+.slide-right-enter-active {
+    transition: all .5s ease;
+}
+
+.slide-right-leave-active {
+    transition: all .5s ease;
+}
+
+.slide-right-enter {
+    transform: translateX(100%);
+}
+
+.slide-right-leave-to {
+    transform: translateX(0);
+    opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0
+}
+

@@ -1,0 +1,52 @@
+/**
+ * @author : wenhao.huang
+ * @date   : 2018/4/3
+ */
+
+@import "iconfont";
+@import "product";
+
+#nav-footer {
+    transform: translateZ(1000px);
+}
+
+
+.tabs{
+    line-height:1;
+    .item + .item{
+        border-left:0.02rem solid $lineColor;
+    }
+}
+
+.input-sms{
+    position:relative;
+    .btn-sms{
+        position:absolute;
+        z-index:5;
+        right:0;
+        top:0;
+        width:2.4rem;height:100%;
+        text-align:center;
+        color:$primary;
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+        &.disabled{
+            color:$gray;
+        }
+        &:before{
+            position:absolute;
+            z-index:2;
+            left:0;top:50%;
+            margin-top:-0.2rem;
+            content:'';
+            height:0.4rem;
+            border-left:0.02rem solid $lineColor;
+        }
+    }
+}
+
+body .notify-wrapper .notify-alert .notify-footer .ft-close{
+    color:$primary;
+}

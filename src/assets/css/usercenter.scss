@@ -1,0 +1,160 @@
+@import "variable";
+
+.wrapper-uc-index {
+    .uc-kf {
+        position: fixed;
+        z-index: 20;
+        right: 0;
+        top: 0.58rem;
+        line-height: 0.6rem;
+        padding: 0 0.1rem 0 0.2rem;
+        background-color:rgba(#7B44D1,0.5);
+        border-top-left-radius: 0.6rem;
+        border-bottom-left-radius: 0.6rem;
+        color:#FFF;
+    }
+    .container-uc-index{
+        background: transparent url("~assets/img/bg-usercenter.png") scroll center top no-repeat;
+        background-size: 100% auto;
+    }
+    .uc-header {
+        position: relative;
+        height: 1.76rem;
+    }
+    .uc-box {
+        margin-bottom: 0.2rem;
+        background-color: #fff;
+        padding: 0 0.3rem;
+        .title-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.3rem;
+            padding: 0.2rem 0;
+            span {
+                color: $gray;
+            }
+        }
+    }
+    .uc-order, .uc-account {
+        .tbody-box {
+            padding: 0.2rem 0 0.4rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .item-order {
+            flex:1;
+            text-align: center;
+            position: relative;
+            .item-icon {
+                margin:0 auto 0.08rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 0.8rem;
+                .icon {
+                    font-size: 0.48rem;
+                }
+            }
+            span.pop {
+                position: absolute;
+                z-index: 2;
+                font-size: 0.2rem;
+                top: 0;
+                padding: 0 0.1rem;
+                border-radius: 0.3rem;
+            }
+        }
+    }
+    .uc-order {
+        .item-icon {
+            background-color: #F7F4FF;
+            border-radius: 0.8rem;
+            color: $primary;
+            width: 0.8rem;
+        }
+        span.pop {
+            right:0.2rem;
+            color: #FFF;
+            background-color: $danger;
+        }
+    }
+    .uc-account {
+        .item-order{
+            flex:1;
+        }
+        span.pop {
+            right: 0;
+            color: $danger;
+            background-color: #FFF;
+            border: 0.02rem solid $danger;
+        }
+        .item-icon {
+            //width:100%;
+            width:0.8rem;
+            background:transparent none scroll center center no-repeat;
+            background-size:100% 100%;
+        }
+        .item-kf{
+            background-image:url("~assets/img/user_service_icon.png");
+        }
+        .item-yh{
+            background-image:url("~assets/img/user_coupon_icon.png");
+        }
+        .item-address{
+            background-image:url("~assets/img/user_address_icon.png");
+        }
+        .item-user{
+            background-image:url("~assets/img/user_set_icon.png");
+        }
+        .item-order:nth-child(1){
+            .item-icon{
+                color:$danger;
+            }
+        }
+        .item-order:nth-child(2){
+            .item-icon{
+                color:$success;
+            }
+        }
+        .item-order:nth-child(3){
+            .item-icon{
+                color:$warning;
+            }
+        }
+        .item-order:nth-child(4){
+            .item-icon{
+                color:$info;
+            }
+        }
+    }
+    .uc-flow{
+        .item-flow{
+            padding:0.2rem 0;
+            & + .item-flow{
+                border-top:0.02rem solid $lineColor;
+            }
+        }
+        .item-thumb{
+            width:1.06rem;
+            height:1.06rem;
+            margin-right:0.2rem;
+        }
+        .cell_bd{
+            height:1.06rem;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+            align-items:flex-start;
+        }
+        .item-desc{
+            width:4.6rem;
+            overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+            color:$gray;
+        }
+    }
+}
