@@ -20,10 +20,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     },
     devtool: config.dev.devtool,
     entry: {
-        app: './src/pages/' + ENV.npm_package_DIR + '/main.js'
+        app: './src/main.js'
     },
     output: {
-        path: utils.resolve('./dist/' + ENV.npm_package_DIR),
+        path: utils.resolve('./dist'),
         filename: 'static/js/[name].js?v=[hash:4]',
         publicPath: ENV.NODE_ENV === 'production'
             ? config.build.assetsPublicPath
@@ -57,7 +57,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         new webpack.NoEmitOnErrorsPlugin(),
         new HtmlWebpackPlugin({
             static:'/static',
-            template: `./src/pages/${ENV.npm_package_DIR}/template.ejs`,
+            template: `./src/template.html`,
             filename: 'index.html',
             inject: true,
             minify: {
